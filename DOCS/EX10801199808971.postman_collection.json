@@ -1,7 +1,7 @@
 {
 	"info": {
 		"_postman_id": "d338c6fd-1e8c-4736-a8e2-95892cf3a6a0",
-		"name": "SW2020_LencaStore",
+		"name": "ExamenParcial",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
 	"item": [
@@ -27,10 +27,95 @@
 								"all"
 							]
 						},
-						"description": "Obiene todos los nodos de usuarios registrador"
+						"description": "Obtiene todos los datos de usuarios registrados"
 					},
 					"response": []
-				}			
+				},
+				{
+					"name": "/api/fotos/users/:id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/fotos/users/:id",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"fotos",
+								"users",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "1"
+								}
+							]
+						},
+						"description": "Obtiene un Usuario por Código ID"
+					},
+					"response": []
+				},
+				{
+					"name": "api/fotos/users/new",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/x-www-form-urlencoded",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "usertitle",
+									"value": "A ferret!",
+									"type": "text"
+								},
+								{
+									"key": "userurl",
+									"value": "https://unsplash.com/photos/PzN5QTx59O0",
+									"type": "text"
+								},
+								{
+									"key": "useralbum",
+									"value": "Ferrets",
+									"type": "text"
+								},
+								{
+									"key": "userthumbnailurl",
+									"value": "https://unsplash.com/s/photos/ferret",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/fotos/users/new",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"fotos",
+								"users",
+								"new"
+							]
+						},
+						"description": "Agrega una nueva imagen"
+					},
+					"response": []
+				}
+			
 				
 				
 				

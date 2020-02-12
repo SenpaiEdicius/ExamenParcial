@@ -105,7 +105,7 @@ userModel.deleteByCode = (id)=>{
   return true;
 }
 
-
+/*
  userCollection.push(
    Object.assign(
      {},
@@ -119,21 +119,7 @@ userModel.deleteByCode = (id)=>{
      }
    )
  );
-
-// userCollection.push(
-//   Object.assign(
-//     {},
-//     userTemplate,
-//     {
-//       userEmail: "fulanodetal@uncorre.com",
-//       userPswd: "noti5678",
-//       userCompleteName: "Fulanito de Tal Menganito",
-//       userID: 2,
-//       userDateCreated: new Date().getTime()
-//     }
-//   )
-// );
-//  // new Date(timestamp)
+ */
 
 
 module.exports = userModel;
