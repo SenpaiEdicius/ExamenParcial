@@ -61,7 +61,7 @@
 					"response": []
 				},
 				{
-					"name": "api/fotos/users/new",
+					"name": "/api/fotos/users/new",
 					"request": {
 						"method": "POST",
 						"header": [
@@ -112,6 +112,68 @@
 							]
 						},
 						"description": "Agrega una nueva imagen"
+					},
+					"response": []
+				},
+				{
+					"name": "/api/fotos/users/upd/:id",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/x-www-form-urlencoded",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "usertitle",
+									"value": "Another ferret!",
+									"type": "text"
+								},
+								{
+									"key": "userurl",
+									"value": "https://unsplash.com/photos/FnpFMheGjH0",
+									"type": "text"
+								},
+								{
+									"key": "useralbum",
+									"value": "Ferrets...",
+									"type": "text"
+								},								
+								{
+									"key": "userthumbnailurl",
+									"value": "https://unsplash.com/s/photos/ferret",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/fotos/users/upd/:id",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"fotos",
+								"users",
+								"upd",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "1"
+								}
+							]
+						},
+						"description": "Actualizar los urls por codigo"
 					},
 					"response": []
 				}
